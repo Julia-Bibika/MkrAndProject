@@ -1,0 +1,29 @@
+.categories{
+    width: 760px;
+    height: 200px;
+}
+.categories ul{
+    display: flex;
+    position: relative;
+    left: 350px;
+}
+.category{
+    list-style-type: none;
+    margin: 25px 15px;
+    font-size: 120px;
+}
+.text{
+    font-size: 20px;
+}
+.container{
+    margin-top: 50px;
+    width: 900px;
+}
+.container ul{
+    position: relative;
+    left: 25%;
+    display: flex;
+}
+.container li{
+    list-style-type: none;
+}
