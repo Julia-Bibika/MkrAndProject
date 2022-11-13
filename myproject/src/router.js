@@ -8,6 +8,7 @@ import About from '@/pages/About/index.vue'
 import SignIn from '@/pages/SignIn/index.vue'
 import SignUp from '@/pages/SignUp/index.vue'
 import CartView from '@/pages/MyCart/index.vue'
+import AddProduct from './components/AddProduct'
 
 const routes = [
   {
@@ -15,6 +16,7 @@ const routes = [
     component: Home,
     name: 'home',
   },
+  { path: '/add/:id?', component: AddProduct, name: 'add' },
   { path: '/products-list/:id?', component: Products, name: 'products' },
   { path: '/about', component: About, name: 'about' },
   { path: '/sign-in', component: SignIn, name: 'sign-in' },

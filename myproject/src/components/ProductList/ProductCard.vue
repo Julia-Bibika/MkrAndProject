@@ -14,7 +14,7 @@
       {{ priceToShow }}
     </div>
     <div class="card-header">
-      
+      <div ><button @click.stop="$emit('delete-item')" class="btn-delete">Delete</button></div>
       <div ><button v-on:click="addToCart(id)" class="buttonAdd">
         Корзина
       </button></div>
@@ -156,5 +156,21 @@ background-color: #066d25;
   margin: 0 0 30px;
   position: relative;
 }
-
+.card-header{
+  display: flex;
+  margin-left: 55px;
+}
+.btn-delete{
+  color : white;
+  padding: 10px;
+   cursor: pointer;
+  border: 5px solid green;
+  border-radius: 40% ;
+  background-color: green ;
+  margin-right: 5px;
+}
+.btn-delete:hover{
+background-color: #066d25;
+ border: 5px solid #066d25;
+}
 </style>

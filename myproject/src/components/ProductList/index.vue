@@ -8,12 +8,14 @@
         :title="item.title"
         :price="item.price"
         :sales="item.sales"
+        @delete-item="onDelete(item.id)"
       />
     </div>
   </div>
 </template>
 
 <script>
+import {mapActions} from "vuex"
 import ProductCard from './ProductCard.vue'
 export default {
   name: 'ProductList',
@@ -35,6 +37,10 @@ export default {
   },
 
   methods: {
+    ...mapActions(['deleteItem']),
+    onDelete(itemId) {
+      this.deleteItem(itemId)
+    },
     onAdd(priceValue) {
       this.totalSum += priceValue
     },

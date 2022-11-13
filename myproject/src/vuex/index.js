@@ -111,6 +111,17 @@ const store = createStore({
     },
 
     mutations:{
+      deleteItem(state, idDelete) {
+        state.listData = state.listData.filter(
+          (item) => item.id !== idDelete
+        )
+      },
+      addNewProduct(state, prod) {
+        state.listData.push({
+          id: state.listData.length + 1,
+          ...prod,
+        })
+      },
       addToCart(state, id) {
         for (let i = 0; i < state.listData.length; i++) {
           if (id == state.listData[i].id) {
@@ -126,6 +137,12 @@ const store = createStore({
           }
         }
       },
+      updateProduct(state, product) {
+        const index = state.listData.findIndex((item) => item.id == product.id)
+        state.listData[index] = {
+          ...JSON.parse(JSON.stringify(product)),
+        }
+      },
     },
     actions: {
       addToCart({ commit }, id) {
@@ -133,6 +150,15 @@ const store = createStore({
       },
       removeToCart({ commit},id){
         commit("removeToCart",id)
+      },
+      addNewProduct({ commit }, prod) {
+        commit('addNewProduct', prod)
+      },
+      deleteItem({ commit }, id) {
+        commit('deleteItem', id)
+      },
+      updateProduct({ commit }, product) {
+        commit('updateProduct', product)
       }
     },
 

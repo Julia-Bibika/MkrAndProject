@@ -8,6 +8,7 @@
       <router-link class="link" to="/products-list">Products</router-link>
       <router-link class="link" to="/about">About</router-link>
       <router-link class="link" to="/cart">Cart</router-link>
+      <router-link class="link" to="/add">Add new product</router-link>
     </p>
         <ul>
             <li><router-link class="link1" to="/sign-in">Sign In</router-link></li>
@@ -47,7 +48,7 @@ h1{
 }
 .links{
   position: relative;
-  left: 55%;
+  left: 40%;
   top:22px;
 }
 .link{
