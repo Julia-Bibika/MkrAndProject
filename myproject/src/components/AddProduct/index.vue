@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="input-container">
     <div>
       <label>
         Силка до зображення
@@ -98,5 +98,22 @@ import { mapActions, mapGetters } from 'vuex'
 </script>
 
 <style lang="scss" scoped>
-
+.input-container{
+  margin-top: 50px;
+}
+input{
+  background: #45f3ff;
+  border:none;
+}
+button{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
 </style>
